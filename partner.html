@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>partner</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body class="bg-[#D9D9D9]">
+    <nav class="w-full shadow-lg bg-white z-40 fixed top-0">
+      <div class="w-full bg-white">
+        <div class="container mx-auto flex gap-4 px-4 justify-between">
+          <div class="logo h-10 mt-6 mb-3">
+            <img src="images/logo.png" alt="" class="w-full h-full object-contain" />
+          </div>
+          <ul class="hidden md:flex gap-6 text-center my-auto">
+            <li><a class="text-[16px] text-[#018491] font-semibold hover:text-sky-400 transition-all duration-300 ease-in-ou hover:underline" href="index.html">Home</a></li>
+            <li><a class="text-[16px] text-[#018491] font-semibold hover:text-sky-400 transition-all duration-300 ease-in-ou hover:underline" href="about.html">About Us</a></li>
+            <li><a class="text-[16px] text-[#018491] font-semibold hover:text-sky-400 transition-all duration-300 ease-in-ou hover:underline" href="partner.html">Partner</a></li>
+            <li><a class="text-[16px] text-[#018491] font-semibold hover:text-sky-400 transition-all duration-300 ease-in-ou hover:underline" href="service.html">service</a></li>
+            <li><a class="text-[16px] text-[#018491] font-semibold hover:text-sky-400 transition-all duration-300 ease-in-ou hover:underline" href="galery.html">Galeri</a></li>
+            <li><a class="text-[16px] text-[#018491] font-semibold hover:text-sky-400 transition-all duration-300 ease-in-ou hover:underline" href="info.html">Info</a></li>
+            <li><a class="text-[16px] text-[#018491] font-semibold hover:text-sky-400 transition-all duration-300 ease-in-ou hover:underline" href="">Karir</a></li>
+            <li><a class="text-[16px] text-[#018491] font-semibold hover:text-sky-400 transition-all duration-300 ease-in-ou hover:underline" href="">Kontak</a></li>
+          </ul>
+          <button onclick="openNavbar()" class="toggle h-14 flex items-center cursor-pointer mt-3 md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-blue-500" fill="#000000" viewBox="0 0 256 256">
+              <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+            </svg>
+          </button>
+          <button onclick="openLogin()" class="hidden md:flex w-fit h-fit my-auto px-4 py-1 bg-[#018491] rounded-lg text-white font-medium cursor-pointer text-center hover:bg-sky-500 transition-all duration-300 ease-in-out">
+            Masuk daftar
+          </button>
+        </div>
+      </div>
+    </nav>
+    <aside class="w-full h-screen bg-white bg-opacity-90 fixed translate-x-full z-50 transition-all duration-700 ease-in-out top-0">
+      <div class="content backdrop-blur h-full flex items-center justify-center relative">
+        <button onclick="closeNavbar()" class="absolute top-4 right-4 z-[99]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="fill-[#018491] h-10 w-10" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+          </svg>
+        </button>
+        <ul class="flex flex-col gap-2 text-center">
+          <li><a class="text-xs text-[#018491] font-semibold" href="index.html">Home</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="about.html">About Us</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="partner.html">Partner</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="service.html">service</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="galery.html">Galeri</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="info.html">Info</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="">Karir</a></li>
+          <li><a class="text-xs text-[#018491] font-semibold" href="">Kontak</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="login w-full h-screen bg-slate-400 bg-opacity-80 fixed z-50 transition-all duration-700 ease-in-out py-20 translate-x-full top-0">
+      <div class="container flex flex-col md:flex-row w-[820px] gap-8 mx-auto p-6 py-24 bg-white rounded-3xl relative pr-14">
+        <button onclick="closeLogin()" class="absolute top-2 right-2 p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+          </svg>
+        </button>
+        <div class="image w-full bg-[#D9D9D9] px-20 py-20 rounded-2xl hidden md:flex">
+          <img src="images/Enter OTP-amico 2.png" alt="" />
+        </div>
+        <div class="caption flex flex-col gap-3 max-w-xl md:w-full">
+          <h2 class="text-2xl font-bold opacity-[50%]">Sing in</h2>
+          <p class="text-sm">Email Addres</p>
+          <form action="">
+            <input type="email" class="bg-[#D9D9D9] w-full p-2 rounded-full" />
+          </form>
+          <p class="text-sm">Password</p>
+          <form action="">
+            <input type="email" class="bg-[#D9D9D9] w-full p-2 rounded-full" />
+          </form>
+          <p class="text-right text-16-[px] opacity-[50%]">Lupa Password</p>
+
+          <div class="sigin flex flex-col gap-3">
+            <button class="bg-[#018491] opacity-[75%] text-sm text-white p-2 rounded-full hover:bg-[#1b747c] transition-all duration-200 ease-in-out">Sign In</button>
+            <button onclick="openAccount()" class="bg-[#D9D9D9] text-black opacity-[75%] text-sm font-semibold p-2 rounded-full hover:bg-[#838383] transition-all duration-200 ease-in-out text-center">Create New Account</button>
+            <button class="flex justify-center p-2 bg-[#D9D9D9] text-black opacity-[75%] text-sm font-semibold gap-2 rounded-full hover:bg-[#838383] transition-all duration-200 ease-in-out">
+              <img src="images/flat-color-icons_google.png" alt="" />
+              masuk/Daftar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newaccount w-full h-screen bg-slate-400 bg-opacity-80 fixed z-50 transition-all duration-700 ease-in-out translate-x-full top-0">
+      <div class="container flex flex-col md:flex-row w-[850px] gap-8 mx-auto p-6 py-24 bg-white rounded-3xl relative pr-14">
+        <button onclick="closeAccount()" class="absolute top-2 right-2 p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+          </svg>
+        </button>
+        <div class="image w-full h-[396px] bg-[#D9D9D9] px-20 py-20 items-center rounded-2xl hidden md:flex">
+          <img src="images/Enter OTP-amico 2.png" alt="" class="w-fit" />
+        </div>
+        <div class="caption flex flex-col gap-3 max-w-xl md:w-full -mt-10">
+          <h2 class="text-2xl font-semibold opacity-[50%]">NEW ACCOUNT</h2>
+          <p class="text-sm">Hi, Ayo bergabung bersama kami menjadi mitra Insania Sinergia</p>
+          <p class="text-sm">Nama</p>
+          <form action="">
+            <input type="email" class="bg-[#D9D9D9] w-full p-2 rounded-full" />
+          </form>
+          <p class="text-sm">Alamat Email</p>
+          <form action="">
+            <input type="email" class="bg-[#D9D9D9] w-full p-2 rounded-full" />
+          </form>
+          <p class="text-sm">Password</p>
+          <form action="">
+            <input type="email" class="bg-[#D9D9D9] w-full p-2 rounded-full" />
+          </form>
+          <p class="text-sm">KonfirmasiPassword</p>
+          <form action="">
+            <input type="email" class="bg-[#D9D9D9] w-full p-2 rounded-full" />
+          </form>
+
+          <button class="bg-[#018491] opacity-[75%] text-sm text-white p-2 rounded-full hover:bg-[#1b747c] transition-all duration-200 ease-in-out">Buat Akun</button>
+          <button class="bg-[#D9D9D9] text-black opacity-[75%] text-sm font-semibold p-2 rounded-full hover:bg-[#838383] transition-all duration-200 ease-in-out mt-4">Daftar dengan google</button>
+          <p class="text-sm">Sudah punya akun? <span class="text-sky-500 cursor-pointer hover:text-sky-600">login</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-36 h-screen flex items-center" data-aos="zoom-in">
+      <div class="container w-fit flex flex-col items-center mx-auto gap-10">
+        <h2 class="text-4xl font-semibold opacity-[75%]">Partner Kami</h2>
+        <div class="first flex flex-col gap-12 md:flex-row md:gap-14 items-center">
+          <img src="images/Logo_PSM_Makasar_Baru 2.png" alt="" class="w-1/2" />
+          <img src="images/logo-1 1.png" alt="" class="w-1/2" />
+          <img src="images/download-removebg-preview 1.png" alt="" class="w-1/2" />
+          <img src="images/image-removebg-preview 1.png" alt="" class="w-1/2" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="w-full h-fit bg-[#025464] opacity-[50%] mt-32">
+      <div class="container flex flex-col gap-10 px-10 py-10 md:flex-row justify-evenly">
+        <div class="identity">
+          <div class="logo-identity w-32 mb-6">
+            <img src="images/logo.png" alt="" />
+          </div>
+          <div class="caption flex items-center gap-3 mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1_91)">
+                <path d="M14 6.79765L20 13.1506V24.1765H17.6V15.7059H10.4V24.1765H8V13.1506L14 6.79765ZM14 3L2 15.7059H5.6V27H12.8V18.5294H15.2V27H22.4V15.7059H26L14 3Z" fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_91">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <h6 class="text-white font-semibold text-base">
+              Jl. Perintis Kemerdekaan <br />
+              No.59, Kota Makassar
+            </h6>
+          </div>
+          <div class="caption flex items-center gap-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.25 9C2.25 3.75 7.5 3.75 12 3.75C16.5 3.75 21.75 3.75 21.75 9C21.75 15 16.5 8.25 16.5 8.25H7.5C7.5 8.25 2.25 15 2.25 9ZM8.25 10.5C8.25 10.5 4.5 14.25 4.5 21H19.5C19.5 14.25 15.75 10.5 15.75 10.5H8.25Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M12 18.75C13.6569 18.75 15 17.4069 15 15.75C15 14.0931 13.6569 12.75 12 12.75C10.3431 12.75 9 14.0931 9 15.75C9 17.4069 10.3431 18.75 12 18.75Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <div class="caption">
+              <h6 class="text-white font-semibold text-base">+6281-2345-6782</h6>
+              <h6 class="text-white font-semibold text-base">insaniasinergia@gmail.com</h6>
+            </div>
+          </div>
+        </div>
+        <div class="layanan flex flex-col gap-2">
+          <div class="title mb-6">
+            <h6 class="text-white font-bold text-[18px]">Layanan Insania Sinergia</h6>
+          </div>
+
+          <p class="text-white font-semibold text-sm">Jasa Pembukaan</p>
+          <p class="text-white font-semibold text-sm">Jasa Pendampingan</p>
+          <p class="text-white font-semibold text-sm">Konsultasi Pajak</p>
+          <p class="text-white font-semibold text-sm">Pembuatan Dan Perubahan Akta</p>
+          <p class="text-white font-semibold text-sm">Kuasa Hukum Pengadilan Pajak</p>
+        </div>
+
+        <div class="sumber flex flex-col gap-2">
+          <div class="title mb-6">
+            <h6 class="text-white font-bold text-[18px]">Sumber Data</h6>
+          </div>
+
+          <p class="text-white font-semibold text-sm">FAQ</p>
+          <p class="text-white font-semibold text-sm">Studi Kasus</p>
+        </div>
+
+        <div class="company flex flex-col gap-2">
+          <div class="title mb-6">
+            <h6 class="text-white font-bold text-[18px]">Company</h6>
+          </div>
+
+          <p class="text-white font-semibold text-sm">About</p>
+          <p class="text-white font-semibold text-sm">Contact</p>
+          <p class="text-white font-semibold text-sm">Careers</p>
+          <p class="text-white font-semibold text-sm">Youtube</p>
+          <p class="text-white font-semibold text-sm">Instagram</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      const sidebar = document.querySelector("aside");
+      const login = document.querySelector(".login");
+      const newaccount = document.querySelector(".newaccount");
+
+      function openNavbar() {
+        sidebar.classList.add("translate-x-0");
+        sidebar.classList.remove("translate-x-full");
+      }
+
+      function closeNavbar() {
+        sidebar.classList.remove("translate-x-0");
+        sidebar.classList.add("translate-x-full");
+      }
+
+      function openLogin() {
+        login.classList.add("translate-x-0");
+        login.classList.remove("translate-x-full");
+      }
+
+      function closeLogin() {
+        login.classList.remove("translate-x-0");
+        login.classList.add("translate-x-full");
+      }
+
+      function openAccount() {
+        newaccount.classList.add("translate-x-0");
+        newaccount.classList.remove("translate-x-full");
+      }
+
+      function closeAccount() {
+        newaccount.classList.remove("translate-x-0");
+        newaccount.classList.add("translate-x-full");
+      }
+    </script>
+  </body>
+</html>
